@@ -14,17 +14,223 @@ body {
     max-width: 1000px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,.1);/*Ajouter l'ombre autour de la carte*/
+    background: white;
+    box-shadow: 0 20px 50px rgba(80,80,200,0.12);/*Ajouter l'ombre autour de la carte*/
 }
 
 #gauche, #droite {
     flex: 1;
-    padding: 40px;
-    border: 1px solid red;   /*temporaire pour voir les boîtes*/
+    padding: 48px 40px;
+    box-sizing: border-box;
 }
 /*display: flex → place les deux sections côte à côte.
 width: 50% → donne à chaque section la moitié de la largeur.
 min-height: 100vh → donne au conteneur une hauteur minimale égale à celle de la fenêtre.*/
-#logo-texte{
 
+#gauche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background: #f7f7ff;
 }
+#logo {
+    display: flex;
+    align-items: center;     /* centreR verticalement le carré et le texte */
+    justify-content: center;
+    gap: 12px;
+}
+
+#logo-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;             /* même valeur que le font-size du texte */
+    height: 40px;
+    background: #5254de;
+    color: white;
+    border-radius: 10px;
+}
+
+#logo-icone svg {
+    display: block;
+    width: 24px;/*SVG du logo l'affiche en bloc et définit sa taille à 24 × 24 px*/
+    height: 24px;
+}
+
+#logo-texte {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: #1a1a3e;
+}
+
+#slogan{
+    font-size: 18px;
+    font-weight: 400;
+    color: #6b6b8a;
+    text-align: center;
+    margin: 16px 0 32px;
+}
+
+#apercu{
+    display: flex;
+    gap: 12px;
+    background: white;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(80, 80, 200, 0.08);
+}
+
+.colonne-tache{
+    flex: 1;/* 3 largeurs égales */
+    display: flex;
+    flex-direction: column;/* titre et rectangles empilés */
+    gap: 6px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#faire{
+    background: #e4e4f8;
+}
+
+#en-cours{
+    background: #fff0c2;
+}
+
+#termine{
+    background: #d0f0dc;
+}
+
+.colonne-tache h3{
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #1a1a3e;
+}
+
+.tache{
+    height: 22px;
+    background: white;
+    border-radius: 6px;
+}
+
+#atouts{
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.atout{
+    flex:1;
+    text-align: center;
+}
+
+.atout strong{
+    display: block;/*le titre prend sa propre ligne*/
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a3e;
+    margin-bottom: 4px;
+}
+
+.atout p {
+    margin: 0; /* enlève la marge par défaut du <p> */
+    font-size: 13px;
+    font-weight: 400;
+    color: #6b6b8a;/* gris-violet comme le slogan */
+}
+
+#apercu, #atouts{
+    width: 100%;
+}
+
+#droite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*centrer verticalement le contenu*/
+    background: white;
+}
+
+#droite h1{
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a3e;
+}
+
+#bienvenue{
+    margin: 0 0 24px;
+    font-size: 15px;
+    color: #6b6b8a;
+}
+
+#formulaire{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formulaire label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a3e;
+}
+
+#formulaire input[type="email"],
+#formulaire input[type="password"] {
+    padding: 14px 16px;
+    border: 1px solid #dcdcf0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 16px;
+}
+/* Cible les champs email et password à l'intérieur de l'élément ayant l'id formulaire.
+[] permet de sélectionner un input selon son type.
+La virgule permet d'appliquer le même style aux deux champs. */
+#options{
+    display: flex;
+    justify-content: space-between;/* un à gauche et un à droite */
+    align-items: center;
+    font-size: 15px;
+}
+
+#options a {
+    color: #3a3ac4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#seconnecter{
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #5254de;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#ou{
+    margin: 4px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #6b6b8a;
+}
+
+#creeruncompte{
+    padding: 16px;
+    border: 1px solid #dcdcf0;
+    border-radius: 12px;
+    background: white;
+    color: #1a1a3e;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
