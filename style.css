@@ -9,6 +9,7 @@ body {
 }
 
 #carte {
+    min-height: 600px;
     display: flex;
     width: 100%;
     max-width: 1000px;
@@ -223,6 +224,10 @@ La virgule permet d'appliquer le même style aux deux champs. */
 }
 
 #creeruncompte{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
     padding: 16px;
     border: 1px solid #dcdcf0;
     border-radius: 12px;
@@ -233,4 +238,55 @@ La virgule permet d'appliquer le même style aux deux champs. */
     font-weight: 600;
     cursor: pointer;
 }
+/*MOT DE PASSE OUBLIER*/
+#envoyer {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #5254de;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/*---------------------------------------------------------------Page-Inscription-Task-Flow----------------------------------------------------------------------------------------------*/
+#formulaire input[type="text"]{
+    padding: 14px 16px;
+    border: 1px solid #dcdcf0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 16px;
+}
 
+#conditions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+#creer-compte{
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #5254de;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#deja-compte{
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    color: #6b6b8a;
+}
+
+#deja-compte a{
+    color: #3a3ac4;
+    font-weight: 600;
+    text-decoration: none;
+}

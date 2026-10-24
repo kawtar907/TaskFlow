@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mot de passe oublié - TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="carte">
+    <!-- COLONNE GAUCHE (identique aux autres pages) -->
+        <section id="gauche">
+            <div id="logo">
+                <span id="logo-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/>
+                    </svg>
+                </span>
+                <span id="logo-texte">TaskFlow</span>
+            </div>
+            <p id="slogan">Organisez vos projets, avancez plus loin.</p>
+            <div id="apercu">
+                <div class="colonne-tache" id="faire">
+                    <h3>À faire</h3>
+                    <div class="tache"></div>
+                    <div class="tache"></div>
+                </div>
+                <div class="colonne-tache" id="en-cours">
+                    <h3>En cours</h3>
+                    <div class="tache"></div>
+                    <div class="tache"></div>
+                </div>
+                <div class="colonne-tache" id="termine">
+                    <h3>Terminé</h3>
+                    <div class="tache"></div>
+                    <div class="tache"></div>
+                </div>
+            </div>
+        <div id="atouts">
+            <div class="atout">
+                <strong>Simple</strong>
+                <p>Étapes claires à suivre</p>
+            </div>
+        <div class="atout">
+                <strong>Rapide</strong>
+                <p>Un projet en un clic</p>
+        </div>
+        <div class="atout">
+                <strong>Productif</strong>
+                <p>Avancez plus sereinement</p>
+        </div>
+    </div>
+</section>
+    <!-- COLONNE DROITE -->
+    <section id="droite">
+        <h1>Mot de passe oublié</h1>
+        <p id="bienvenue">Entrez votre email pour recevoir un lien de réinitialisation.</p>
+            <form id="formulaire">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="exemple@domaine.com">
+                <button type="submit" id="envoyer">Envoyer le lien</button>
+                <p id="deja-compte"><a href="login.html">← Retour à la connexion</a></p>
+            </form>
+</section>
+</div>
+</body>
+</html>
