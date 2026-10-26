@@ -1,0 +1,361 @@
+/* ==========================================================================
+   1. REINITIALISATION ET STYLES DE BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f5fd;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. CONTENEUR PRINCIPAL (LAYOUT FLEXBOX)
+   ========================================================================== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   3. BARRE LATÉRALE (SIDEBAR)
+   ========================================================================== */
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-left: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.nav-item.active {
+  background-color: #eef2ff;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.nav-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  margin: 20px 0 8px 12px;
+}
+
+/* ==========================================================================
+   4. ZONE PRINCIPALE (MAIN CONTENT)
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* En-tête */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-titles h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-logout {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: #f8fafc;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Bannière d'information */
+.info-banner {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Carte de progression */
+.progress-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.progress-percentage {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4f46e5;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   5. TABLEAU KANBAN ET CARTE DE TÂCHE
+   ========================================================================== */
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.kanban-column {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid transparent; /* Bordure colorée en haut */
+}
+
+/* Couleurs de bordure supérieure des colonnes */
+.border-gray {
+  border-top-color: #cbd5e1;
+}
+
+.border-orange {
+  border-top-color: #f97316;
+}
+
+.border-green {
+  border-top-color: #22c55e;
+}
+
+/* En-tête de colonne */
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.column-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.count-badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Liste et cartes */
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Badges de priorité */
+.priority-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.priority-high {
+  background-color: #ffe4e6;
+  color: #e11d48;
+}
+
+.priority-medium {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.priority-low {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.task-tools {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.task-tools a {
+  color: #059669;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (ECRANS MOBILES ET TABLETTES)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .kanban-board {
+    flex-direction: column;
+  }
+}

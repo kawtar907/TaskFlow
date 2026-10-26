@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Application Mobile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>Hi</div>
+
+  <!-- Structure principale : barre latérale + contenu -->
+  <div class="app-container">
+
+    <!-- BARRE LATÉRALE (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <div class="logo-icon">&#10003;</div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#8862;</span>
+          <span>Tableau de bord</span>
+        </a>
+
+        <div class="nav-section-title">TYPES</div>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">&#9881;</span>
+          <span>App Web</span>
+        </a>
+
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">&#128241;</span>
+          <span>App Mobile</span>
+        </a>
+
+        <a href="index2.html" class="nav-item">
+          <span class="nav-icon">&#128187;</span>
+          <span>App Desktop</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL (MAIN CONTENT) -->
+    <main class="main-content">
+
+      <!-- EN-TÊTE DU CONTENU -->
+      <header class="main-header">
+        <div class="header-titles">
+          <h1>Application Mobile</h1>
+          <p class="subtitle">Mobile Development &middot; 9 étapes</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn-logout">Déconnexion</button>
+          <div class="user-avatar">&#128100;</div>
+        </div>
+      </header>
+
+      <!-- BANNIÈRE D'INFORMATION -->
+      <div class="info-banner">
+        Cliquez sur un outil en vert pour ouvrir sa documentation officielle dans un nouvel onglet.
+      </div>
+
+      <!-- CARTE PROGRESSION GLOBALE -->
+      <section class="progress-card">
+        <div class="progress-header">
+          <h2>Progression globale</h2>
+          <span class="progress-percentage">11 %</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 11%;"></div>
+        </div>
+      </section>
+
+      <!-- BOARD KANBAN (COLONNES) -->
+      <section class="kanban-board">
+
+        <!-- COLONNE 1 : À FAIRE -->
+        <div class="kanban-column border-gray">
+          <div class="column-header">
+            <h3>À faire</h3>
+            <span class="count-badge">7</span>
+          </div>
+
+          <div class="cards-list">
+            <!-- Carte 1 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">3</span>
+                <span class="priority-badge priority-high">Haute</span>
+              </div>
+              <h4 class="task-title">Configuration du projet</h4>
+              <p class="task-tools">Outils : <a href="#">React Native &#8599;</a> &middot; <a href="#">Node.js &#8599;</a></p>
+            </article>
+
+            <!-- Carte 2 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">4</span>
+                <span class="priority-badge priority-high">Haute</span>
+              </div>
+              <h4 class="task-title">Navigation et écrans</h4>
+              <p class="task-tools">Outils : <a href="#">React Native &#8599;</a></p>
+            </article>
+
+            <!-- Carte 3 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">5</span>
+                <span class="priority-badge priority-medium">Moyenne</span>
+              </div>
+              <h4 class="task-title">Fonctionnalités principales</h4>
+              <p class="task-tools">Outils : <a href="#">React Native &#8599;</a> &middot; <a href="#">JavaScript &#8599;</a></p>
+            </article>
+
+            <!-- Carte 4 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">6</span>
+                <span class="priority-badge priority-medium">Moyenne</span>
+              </div>
+              <h4 class="task-title">API et stockage</h4>
+              <p class="task-tools">Outils : <a href="#">React Native &#8599;</a> &middot; <a href="#">Node.js &#8599;</a></p>
+            </article>
+
+            <!-- Carte 5 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">7</span>
+                <span class="priority-badge priority-low">Basse</span>
+              </div>
+              <h4 class="task-title">Permissions natives</h4>
+              <p class="task-tools">Outils : <a href="#">React Native &#8599;</a></p>
+            </article>
+
+            <!-- Carte 6 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">8</span>
+                <span class="priority-badge priority-medium">Moyenne</span>
+              </div>
+              <h4 class="task-title">Tests sur appareils</h4>
+              <p class="task-tools">Outils : <a href="#">Android Studio &#8599;</a></p>
+            </article>
+
+            <!-- Carte 7 -->
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">9</span>
+                <span class="priority-badge priority-medium">Moyenne</span>
+              </div>
+              <h4 class="task-title">Build et publication</h4>
+              <p class="task-tools">Outils : <a href="#">Git &#8599;</a></p>
+            </article>
+          </div>
+        </div>
+
+        <!-- COLONNE 2 : EN COURS -->
+        <div class="kanban-column border-orange">
+          <div class="column-header">
+            <h3>En cours</h3>
+            <span class="count-badge">1</span>
+          </div>
+
+          <div class="cards-list">
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">2</span>
+                <span class="priority-badge priority-high">Haute</span>
+              </div>
+              <h4 class="task-title">Maquettes mobiles</h4>
+              <p class="task-tools">Outils : <a href="#">Figma &#8599;</a></p>
+            </article>
+          </div>
+        </div>
+
+        <!-- COLONNE 3 : TERMINÉ -->
+        <div class="kanban-column border-green">
+          <div class="column-header">
+            <h3>Terminé</h3>
+            <span class="count-badge">1</span>
+          </div>
+
+          <div class="cards-list">
+            <article class="task-card">
+              <div class="card-header">
+                <span class="step-number">1</span>
+                <span class="priority-badge priority-high">Haute</span>
+              </div>
+              <h4 class="task-title">Analyse des besoins</h4>
+              <p class="task-tools">Outils : <a href="#">Notion &#8599;</a></p>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
 </body>
 </html>
