@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Application Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre latérale de navigation (identique à la page 3, seul le lien "actif" change) -->
+    <aside>
+
+        <!-- Logo de l'application -->
+        <div id="logo">
+            <span id="logo-icone">
+                <!-- Icône SVG représentant une liste de tâches -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/>
+                </svg>
+            </span>
+            <span id="logo-texte">TaskFlow</span>
+        </div>
+
+        <!-- Navigation principale : Vue d'ensemble (n'est plus la page courante) -->
+        <nav>
+            <ul>
+                <li><a href="#"><span class="icone">📊</span> Tableau de bord</a></li>
+            </ul>
+        </nav>
+
+        <!-- Titre de la rubrique des catégories -->
+        <p class="menu-titre">Types</p>
+
+        <!-- Navigation : types de projet (App Web est la page courante, donc "actif") -->
+        <nav>
+            <ul>
+                <li><a href="#" class="actif"><span class="icone">🌐</span> App Web</a></li>
+                <li><a href="#"><span class="icone">📱</span> App Mobile</a></li>
+                <li><a href="#"><span class="icone">🖥️</span> App Desktop</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- Contenu principal de la page -->
+    <main>
+
+        <!-- En-tête : même structure que la page 3, seuls les textes changent -->
+        <header>
+            <!-- Groupe de gauche : titre et sous-titre -->
+            <div class="header-texte">
+                <h1>Application Web</h1>
+                <p>Web Development · 9 étapes</p>
+            </div>
+
+            <!-- Groupe de droite : boutons d'action utilisateur -->
+            <div class="header-actions">
+                <button>Déconnexion</button>
+                <button>👤</button>
+            </div>
+        </header>
+
+        <!-- Encadré vert d'information (nouveau sur cette page) -->
+        <p class="info-outils">Cliquez sur un outil en vert pour ouvrir sa documentation officielle dans un nouvel onglet.</p>
+
+        <!-- Carte "Progression globale" (même barre que sur la page 3) -->
+        <section class="progression-globale">
+            <!-- Ligne supérieure : titre à gauche, pourcentage à droite -->
+            <div class="carte-header">
+                <h2 class="carte-titre">Progression globale</h2>
+                <span class="pourcentage">33 %</span>
+            </div>
+            <!-- Barre de progression (Rail gris + Jauge colorée) -->
+            <div class="barre-rail">
+                <div class="barre-jauge" style="width: 33%;"></div>
+            </div>
+        </section>
+
+        <!-- Conteneur des 3 colonnes (pour les placer côte à côte en CSS) -->
+        <div class="kanban">
+
+            <!-- Colonne 1 : À faire (tâches 5 à 9) -->
+            <section class="colonne a-faire">
+                <!-- Ligne du haut : nom de la colonne + compteur -->
+                <div class="colonne-header">
+                    <h3>À faire</h3>
+                    <span class="compteur">5</span>
+                </div>
+
+                <!-- Tâche 5 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">5</span>
+                        <span class="badge moyenne">Moyenne</span>
+                    </div>
+                    <h4 class="tache-titre">Développement JavaScript</h4>
+                    <!-- Ligne des outils : chaque outil est un lien qui s'ouvre dans un nouvel onglet -->
+                    <p class="tache-outils">Outils :
+                        <a href="https://www.w3schools.com/js/" class="outil" target="_blank" rel="noopener">JavaScript</a> ·
+                        <a href="https://code.visualstudio.com/docs" class="outil" target="_blank" rel="noopener">VS Code</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 6 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">6</span>
+                        <span class="badge basse">Basse</span>
+                    </div>
+                    <h4 class="tache-titre">Backend et API</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://nodejs.org/docs" class="outil" target="_blank" rel="noopener">Node.js</a> ·
+                        <a href="https://git-scm.com/doc" class="outil" target="_blank" rel="noopener">Git</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 7 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">7</span>
+                        <span class="badge basse">Basse</span>
+                    </div>
+                    <h4 class="tache-titre">Base de données</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://www.w3schools.com/sql/" class="outil" target="_blank" rel="noopener">SQL</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 8 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">8</span>
+                        <span class="badge moyenne">Moyenne</span>
+                    </div>
+                    <h4 class="tache-titre">Tests et débogage</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://developer.chrome.com/docs/devtools" class="outil" target="_blank" rel="noopener">DevTools</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 9 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">9</span>
+                        <span class="badge moyenne">Moyenne</span>
+                    </div>
+                    <h4 class="tache-titre">Déploiement</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://git-scm.com/doc" class="outil" target="_blank" rel="noopener">Git</a>
+                    </p>
+                </article>
+            </section>
+
+            <!-- Colonne 2 : En cours (tâche 4) -->
+            <section class="colonne en-cours">
+                <div class="colonne-header">
+                    <h3>En cours</h3>
+                    <span class="compteur">1</span>
+                </div>
+
+                <!-- Tâche 4 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">4</span>
+                        <span class="badge haute">Haute</span>
+                    </div>
+                    <h4 class="tache-titre">Style CSS / Tailwind</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://www.w3schools.com/css/" class="outil" target="_blank" rel="noopener">CSS</a> ·
+                        <a href="https://tailwindcss.com/docs" class="outil" target="_blank" rel="noopener">Tailwind</a>
+                    </p>
+                </article>
+            </section>
+
+            <!-- Colonne 3 : Terminé (tâches 1 à 3) -->
+            <section class="colonne termine">
+                <div class="colonne-header">
+                    <h3>Terminé</h3>
+                    <span class="compteur">3</span>
+                </div>
+
+                <!-- Tâche 1 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">1</span>
+                        <span class="badge haute">Haute</span>
+                    </div>
+                    <h4 class="tache-titre">Analyse des besoins</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://www.notion.com/help" class="outil" target="_blank" rel="noopener">Notion</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 2 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">2</span>
+                        <span class="badge haute">Haute</span>
+                    </div>
+                    <h4 class="tache-titre">Conception UI/UX</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://help.figma.com" class="outil" target="_blank" rel="noopener">Figma</a>
+                    </p>
+                </article>
+
+                <!-- Tâche 3 -->
+                <article class="tache">
+                    <div class="tache-haut">
+                        <span class="numero">3</span>
+                        <span class="badge haute">Haute</span>
+                    </div>
+                    <h4 class="tache-titre">Structure HTML</h4>
+                    <p class="tache-outils">Outils :
+                        <a href="https://www.w3schools.com/html/" class="outil" target="_blank" rel="noopener">HTML</a> ·
+                        <a href="https://code.visualstudio.com/docs" class="outil" target="_blank" rel="noopener">VS Code</a>
+                    </p>
+                </article>
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
