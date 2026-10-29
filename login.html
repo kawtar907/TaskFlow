@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Flow</title>
+    <title>Connexion - TaskFlow</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@
     <section id="droite">
       <h1>Se connecter</h1>
       <p id="bienvenue">Bienvenue sur TaskFlow ! Connectez-vous pour accéder à votre tableau de bord.</p>
-      <form id="formulaire">
+      <form id="formulaire" novalidate>
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="exemple@domaine.com">
         <label for="mdp">Mot de passe</label>
@@ -70,11 +70,14 @@
           </div>
           <a href="mot-de-passe-oublie.html">Mot de passe oublié ?</a>
         </div>
+        <p id="message" hidden></p>
         <button type="submit" id="seconnecter">Se connecter →</button>
         <p id="ou">ou</p>
         <a href="inscription.html" id="creeruncompte">Créer un compte</a>
       </form>
     </section>
   </div>
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>

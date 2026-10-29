@@ -58,7 +58,7 @@
 <section id="droite">
     <h1>Créer un compte</h1>
     <p id="bienvenue">Rejoignez TaskFlow et organisez vos projets de développement.</p>
-    <form id="formulaire">
+    <form id="formulaire" novalidate>
         <label for="nom">Nom complet</label>
         <input type="text" id="nom" placeholder="Votre nom">
 
@@ -75,10 +75,13 @@
             <input type="checkbox" id="accepte">
             <label for="accepte">J'accepte les conditions d'utilisation</label>
         </div>
+        <p id="message" hidden></p>
         <button type="submit" id="creer-compte">Créer mon compte</button>
-        <p id="deja-compte">Déja un compte ?<a href="login.html">Se connecter</a></p>
+        <p id="deja-compte">Déjà un compte ? <a href="login.html">Se connecter</a></p>
     </form>
 </section>
 </div>
+<script src="js/storage.js"></script>
+<script src="js/inscription.js"></script>
 </body>
 </html>

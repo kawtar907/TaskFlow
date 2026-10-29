@@ -290,3 +290,60 @@ La virgule permet d'appliquer le même style aux deux champs. */
     font-weight: 600;
     text-decoration: none;
 }
+
+/*---------------------------------------------------------------JavaScript----------------------------------------------------------------------------------------------*/
+/* Sans cette règle, "hidden" est ignoré quand un display est défini */
+[hidden] {
+    display: none !important;
+}
+
+#message {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+#message.erreur {
+    color: #c0392b;
+}
+
+#message.succes {
+    color: #2e7d4f;
+}
+
+#zone-nouveau {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Case à cocher + texte alignés, texte en poids normal comme la maquette */
+#options div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#options label,
+#conditions label {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* Page dashboard */
+#dashboard {
+    text-align: center;
+    color: #1a1a3e;
+}
+
+#deconnexion {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    background: #5254de;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}

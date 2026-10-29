@@ -61,10 +61,18 @@
             <form id="formulaire">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="exemple@domaine.com">
+                <div id="zone-nouveau" hidden>
+                    <label for="nouveau-mdp">Nouveau mot de passe</label>
+                    <input type="password" id="nouveau-mdp" placeholder="8 caractères minimum">
+                </div>
+
+                <p id="message" hidden></p>
                 <button type="submit" id="envoyer">Envoyer le lien</button>
                 <p id="deja-compte"><a href="login.html">← Retour à la connexion</a></p>
             </form>
 </section>
 </div>
+<script src="js/storage.js"></script>
+<script src="js/oublie.js"></script>
 </body>
 </html>
